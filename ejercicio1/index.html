@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es" ng-app="myApp"> <!--este nombre se lo doy yo-->
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Ejercicio</title>
+</head>
+
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+     <div> <h1 align="center" >Convertidor de Pesos a Dolares</h1> </div>
+
+    <div> Valor en pesos: <input class="form_input" type="number" ng-model="peso"><br></div>
+<div>
+     Valor dolar: <input class="form_input" type="number" ng-model="dolar"><br>
+     </div>
+    <H4 > TOTAL EN DOLARES: {{fullName()}}</H4>
+     
+     </div>
+     <script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.peso= "peso";
+    $scope.dolar = "dolar";
+    $scope.fullName = function() {
+        return $scope.peso/$scope.dolar;
+    };
+});
+</script>
+
+   <!--framework js-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+   
+<script src="monedacontrolls.js"></script>
+ 
+<script src="/lib/angular-1.4.8.min.js"></script>
+
+
+
+</body>
+</html>
