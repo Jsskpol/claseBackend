@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="listaApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Crear.css">
+    <title>Crear receta</title>
+</head>
+<body ng-controller="CrearController">
+    <header class="header">
+		<img src="../imagenes/logo.png" alt=""><br><br>
+        <h1 class="header__title">Nueva receta</h1>
+    </header><br><br>
+    <section class="form">
+        <label for="name" class="form__label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+  <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+</svg> Nombre</label>
+        <input type="text" id="name" class="form__input" placeholder="Ingresa nombre nueva receta" ng-model="nameInput">
+        <label for="steps" class="form__label"> Preparación</label>
+        <textarea name="text" rows="4" cols="40" class="form__input" placeholder="" ng-model="stepsInput"></textarea>
+   
+        <a class="form__button" ng-click="crear()">GUARDAR</a>
+    </section>
+    <footer class="footer">
+        <a href="../ListaContactos/ListaContactos.html" class="footer__button">Regresar</a>
+    </footer>
+    
+    <!-- Librerias -->
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>    
+    <!-- Sweet Alert js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>   
+    
+    <!-- Controllers -->
+    <!-- App -->
+    <script src="../App.js"></script>
+    <!-- crearController -->
+    <script src="./CrearController.js"></script>
+</body>
+</html>
